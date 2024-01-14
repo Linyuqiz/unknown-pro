@@ -1,0 +1,4 @@
+[workspace]
+resolver = "2"
+members = ["server", "server/src/migration"]
+exclude = ["unknown"]

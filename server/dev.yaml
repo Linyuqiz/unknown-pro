@@ -1,0 +1,9 @@
+name: server
+version: 1.0.0
+host: 127.0.0.1
+port: 32432
+
+mysql:
+  default:
+    encrypt: false
+    dsn: "postgres://unknown:unknown-password@postgres.orb.local:5432/unknown?schema=public"

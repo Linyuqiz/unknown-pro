@@ -1,0 +1,31 @@
+[package]
+name = "server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ntex = { version = "1", features = ["tokio"] }
+tracing-subscriber = "0.3"
+tracing = "0.1"
+serde = "1.0"
+serde_yaml = "0.9"
+chrono = "0.4"
+snowflaked = "1"
+lazy_static = "1"
+sea-orm = { version = "0.12", features = [
+    "sqlx-postgres",
+    "runtime-tokio-rustls",
+    "macros",
+    "debug-print",
+    "with-chrono",
+    "with-time",
+    "with-json",
+    "with-rust_decimal",
+    "with-bigdecimal",
+    "with-uuid",
+] }
+migration = { path = "src/migration" }
+anyhow = "1.0"
+thiserror = "1.0"
